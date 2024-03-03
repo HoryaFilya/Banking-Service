@@ -1,28 +1,26 @@
 package ru.shaikhraziev.bankingservice.dto;
 
-import jakarta.persistence.Column;
+import lombok.Builder;
+import lombok.Getter;
+import ru.shaikhraziev.bankingservice.entity.Email;
+import ru.shaikhraziev.bankingservice.entity.Phone;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 
+@Getter
+@Builder
 public class UserReadDto {
 
     private Long id;
-
-    @Column(nullable = false, unique = true)
     private String login;
-
-    @Column(nullable = false)
     private String password;
-
-    @Column(nullable = false)
-    private BigDecimal bankAccount;
-
+    private BigDecimal currentBalance;
     private LocalDate birthdate;
-
     private String firstname;
-
     private String lastname;
-
     private String patronymic;
+    private List<Phone> phoneNumbers;
+    private List<Email> emailAddresses;
 }

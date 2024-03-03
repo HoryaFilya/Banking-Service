@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/test
+    username: test
+    password: test
+    driver-class-name: org.postgresql.Driver
+#  jpa:
+#    show-sql: true
+
+logging:
+  level:
+    root: INFO
+
+SECRET_KEY: Yn2kjibddFAWtnPJ2AFlL8WXmohJMCvigQggaEypa5E=
